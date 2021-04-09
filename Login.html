@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html style="width: 100%; height: 100%; margin: Opx">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script>
+        function login(form) {
+            function validar_formulario(form) {
+		if (form.user.value === "") { //para dar un mensaje si est vacio el campo
+			alerta('\"Usuario\"'); form.user.focus(); 
+                        return true; 
+		}
+                if (form.password.value === "") { //para dar un mensaje si est vacio el campo
+			alerta('\"Contrasena\"'); form.password.focus(); 
+                        return true;
+                form.submit();
+        }
+    </script>
+    <body style="width: 100%; height: 100%; margin: Opx">
+        <div style="display: table; width: 100%; height: 100%; float: left; margin: Opx">
+            <div style="display: table; width: 30%; height: 100%; background-color: blue; float: left">
+                <center>
+                    <img src="FAASE.png" style="height: 200px; width: 200px">
+                    <h1><font face="Arial Black" color="white" size="16">FAASE</font></h1>
+                </center>
+                <h3><font color="white" size="6"><i>"Los mejores recuerdos empiezan aquí"</i></font></h3>
+                <img src="playa.png" style="height: 15%; width: 100%; float: bottom">
+            </div>
+            <div style="display: table; width: 70%; height: 100%; float: left">
+                <center>
+                    Usuario / Correo electrónico
+                    <br>
+                    <input type="text" size="36" id="user" name="user">
+                    <br>
+                    Contraseña
+                    <br>
+                    <input type="text" size="24" id="password" name="password">
+                    <br><br><br>
+                    <input type="button" value="Iniciar Sesion" id="submit" onclick="login(this.form)">
+                </center>
+            </div>
+        </div>
+    </body>
+</html>
